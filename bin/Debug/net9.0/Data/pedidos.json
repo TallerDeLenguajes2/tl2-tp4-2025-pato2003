@@ -1,0 +1,102 @@
+[
+  {
+    "nro": 1,
+    "obs": "Entregar antes de las 12",
+    "cliente": {
+      "nombre": "Juan Pérez",
+      "direccion": "Calle Falsa 123",
+      "telefono": "1133445566",
+      "referencia": "Frente a la plaza"
+    }
+  },
+  {
+    "nro": 2,
+    "obs": "Llamar al llegar",
+    "cliente": {
+      "nombre": "María Gómez",
+      "direccion": "Av. Siempre Viva 742",
+      "telefono": "1144556677",
+      "referencia": "Edificio azul"
+    }
+  },
+  {
+    "nro": 3,
+    "obs": "Dejar en portería",
+    "cliente": {
+      "nombre": "Carlos López",
+      "direccion": "Boulevard Central 456",
+      "telefono": "1155667788",
+      "referencia": "Torre B"
+    }
+  },
+  {
+    "nro": 4,
+    "obs": "No llamar timbre",
+    "cliente": {
+      "nombre": "Ana Torres",
+      "direccion": "Diagonal Norte 321",
+      "telefono": "1166778899",
+      "referencia": "Casa con rejas verdes"
+    }
+  },
+  {
+    "nro": 5,
+    "obs": "Entregar a vecino si no está",
+    "cliente": {
+      "nombre": "Pedro Sánchez",
+      "direccion": "Ruta 8 Km 12",
+      "telefono": "1177889900",
+      "referencia": "Casa esquina"
+    }
+  },
+  {
+    "nro": 6,
+    "obs": "Cliente paga con billete grande",
+    "cliente": {
+      "nombre": "Lucía Fernández",
+      "direccion": "Pasaje Los Robles 55",
+      "telefono": "1188990011",
+      "referencia": "Puerta marrón"
+    }
+  },
+  {
+    "nro": 7,
+    "obs": "No tiene cambio",
+    "cliente": {
+      "nombre": "Martín Castro",
+      "direccion": "Av. Libertad 1000",
+      "telefono": "1199001122",
+      "referencia": "Depto 3B"
+    }
+  },
+  {
+    "nro": 8,
+    "obs": "Entregar en oficina",
+    "cliente": {
+      "nombre": "Sofía Ramírez",
+      "direccion": "Callejón del Sol 77",
+      "telefono": "1100112233",
+      "referencia": "Oficina 12"
+    }
+  },
+  {
+    "nro": 9,
+    "obs": "Cliente con perro",
+    "cliente": {
+      "nombre": "Federico Ruiz",
+      "direccion": "Av. San Martín 200",
+      "telefono": "1122334455",
+      "referencia": "Casa blanca"
+    }
+  },
+  {
+    "nro": 10,
+    "obs": "No dejar en buzón",
+    "cliente": {
+      "nombre": "Valentina Díaz",
+      "direccion": "Calle 9 de Julio 150",
+      "telefono": "1133557799",
+      "referencia": "Puerta negra"
+    }
+  }
+]

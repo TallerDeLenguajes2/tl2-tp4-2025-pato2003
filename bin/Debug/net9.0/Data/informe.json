@@ -1,0 +1,52 @@
+[
+  {
+    "cantPedidos": 12,
+    "montoGanado": 4800.0,
+    "nombreCadete": "Juan Pérez"
+  },
+  {
+    "cantPedidos": 9,
+    "montoGanado": 3600.0,
+    "nombreCadete": "María Gómez"
+  },
+  {
+    "cantPedidos": 15,
+    "montoGanado": 6000.0,
+    "nombreCadete": "Carlos López"
+  },
+  {
+    "cantPedidos": 7,
+    "montoGanado": 2800.0,
+    "nombreCadete": "Ana Torres"
+  },
+  {
+    "cantPedidos": 11,
+    "montoGanado": 4400.0,
+    "nombreCadete": "Pedro Sánchez"
+  },
+  {
+    "cantPedidos": 13,
+    "montoGanado": 5200.0,
+    "nombreCadete": "Lucía Fernández"
+  },
+  {
+    "cantPedidos": 8,
+    "montoGanado": 3200.0,
+    "nombreCadete": "Martín Castro"
+  },
+  {
+    "cantPedidos": 10,
+    "montoGanado": 4000.0,
+    "nombreCadete": "Sofía Ramírez"
+  },
+  {
+    "cantPedidos": 6,
+    "montoGanado": 2400.0,
+    "nombreCadete": "Federico Ruiz"
+  },
+  {
+    "cantPedidos": 14,
+    "montoGanado": 5600.0,
+    "nombreCadete": "Valentina Díaz"
+  }
+]

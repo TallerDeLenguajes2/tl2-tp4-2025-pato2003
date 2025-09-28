@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nombre": "Juan Pérez",
+    "direccion": "Calle Falsa 123",
+    "telefono": "1133445566"
+  },
+  {
+    "id": 2,
+    "nombre": "María Gómez",
+    "direccion": "Av. Siempre Viva 742",
+    "telefono": "1144556677"
+  },
+  {
+    "id": 3,
+    "nombre": "Carlos López",
+    "direccion": "Boulevard Central 456",
+    "telefono": "1155667788"
+  },
+  {
+    "id": 4,
+    "nombre": "Ana Torres",
+    "direccion": "Diagonal Norte 321",
+    "telefono": "1166778899"
+  },
+  {
+    "id": 5,
+    "nombre": "Pedro Sánchez",
+    "direccion": "Ruta 8 Km 12",
+    "telefono": "1177889900"
+  },
+  {
+    "id": 6,
+    "nombre": "Lucía Fernández",
+    "direccion": "Pasaje Los Robles 55",
+    "telefono": "1188990011"
+  },
+  {
+    "id": 7,
+    "nombre": "Martín Castro",
+    "direccion": "Av. Libertad 1000",
+    "telefono": "1199001122"
+  },
+  {
+    "id": 8,
+    "nombre": "Sofía Ramírez",
+    "direccion": "Callejón del Sol 77",
+    "telefono": "1100112233"
+  }
+]
