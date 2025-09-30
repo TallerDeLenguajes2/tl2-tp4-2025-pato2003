@@ -6,6 +6,7 @@ namespace accesoADatosJSON
     using iAccesoADatos;
     using pedidos;
     using informe;
+    using System.Text.Json.Serialization;
     public class AccesoADatosJSON : IAccesoADatos
     {
         private string archivoCadeteria;
@@ -59,7 +60,9 @@ namespace accesoADatosJSON
                 using (StreamReader sr = new StreamReader(fs))
                 {
                     string contenido = sr.ReadToEnd();
-                    List<Pedidos> listaPedidos = JsonSerializer.Deserialize<List<Pedidos>>(contenido);
+                    var options = new JsonSerializerOptions();
+                    options.Converters.Add(new JsonStringEnumConverter());
+                    List<Pedidos> listaPedidos = JsonSerializer.Deserialize<List<Pedidos>>(contenido, options);
                     fs.Close();
                     return listaPedidos;
                 }
@@ -80,9 +83,24 @@ namespace accesoADatosJSON
             }
         }
 
-        public void agregarPedido(Pedidos pedido)
+
+        public void guardarPedidos(List<Pedidos> listaPedidos)
         {
-            
+            var options = new JsonSerializerOptions { WriteIndented = true };
+            var json = JsonSerializer.Serialize(listaPedidos, options);
+            File.WriteAllText(ruta + archivoPedido, json);
+        }
+
+        public Pedidos agregarPedido(Pedidos pedido)
+        {
+            var listaPedidos = getPedidos();
+            if (listaPedidos.Any(p => p.Nro == pedido.Nro))
+            {
+                pedido.Nro = listaPedidos.Max(p => p.Nro) + 1;
+            }
+            listaPedidos.Add(pedido);
+            guardarPedidos(listaPedidos);
+            return pedido;
         }
 
     }

@@ -37,3 +37,4 @@ C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\obj\Debug\net9.0\ref\tl2-
 C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\bin\Debug\net9.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\obj\Debug\net9.0\tl2-tp4-2025-pato2003.sourcelink.json

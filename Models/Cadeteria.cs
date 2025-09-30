@@ -63,11 +63,11 @@ namespace cadeteria
         }
 
 
-        private Pedidos? GetPedido(int idPedido)
+        private Pedidos GetPedido(int idPedido)
         {
             return ListadoPedidos.Find(pedido => pedido.Nro == idPedido);
         }
-        private Cadete? GetCadete(int idCadete)
+        private Cadete GetCadete(int idCadete)
         {
             return ListadoCadetes.Find(cadete => cadete.Id == idCadete);
         }
@@ -76,8 +76,8 @@ namespace cadeteria
 
         public void reasignarPedido(int idPedido, int idCadeteNuevo)
         {
-            Pedidos? pedidoAReasignar = GetPedido(idPedido);
-            Cadete? cadeteNuevo = GetCadete(idCadeteNuevo);
+            Pedidos pedidoAReasignar = GetPedido(idPedido);
+            Cadete cadeteNuevo = GetCadete(idCadeteNuevo);
             pedidoAReasignar.asignarCadete(cadeteNuevo);
         }
 
@@ -135,35 +135,7 @@ namespace cadeteria
 
         
 
-        public void cambiarEstadoPedido(int idPedido, int idEstadoNuevo)
-        {
-            Pedidos pedido = ListadoPedidos.Find(pedido => pedido.Nro == idPedido);
-            Estado estadoNuevo;
-            switch (idEstadoNuevo)
-            {
-                case 1:
-                    estadoNuevo = Estado.Preparando;
-                    break;
-                case 2:
-                    estadoNuevo = Estado.Listo;
-                    break;
-                case 3:
-                    estadoNuevo = Estado.Cancelado;
-                    break;
-                case 4:
-                    estadoNuevo = Estado.Enviado;
-                    break;
-                case 5:
-                    estadoNuevo = Estado.Entregado;
-                    break;
-                default:
-                    estadoNuevo = Estado.EsperandoConfirmacion;
-                    break;
-            }
-            pedido.cambiarEstado(estadoNuevo);
-            return;
-        }
-
+  
         public void agregarListaCadetes(List<Cadete> listadoCadetes)
         {
             foreach (Cadete cadete in listadoCadetes)

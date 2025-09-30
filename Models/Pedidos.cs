@@ -13,9 +13,10 @@ namespace pedidos
         [JsonPropertyName("cliente")]
         public Cliente Cliente{ get; set; }
         [JsonPropertyName("estado")]
-        private Estado Estado{ get; set; }
-        private Cadete cadete;
-        public static int id = 0;
+        public Estado Estado{ get; set; }
+        [JsonPropertyName("cadete")]
+        public Cadete Cadete{ get; set; }
+        private static int id = 0;
 
         public Pedidos(string obs, Cliente cliente)
         {
@@ -26,21 +27,41 @@ namespace pedidos
             Estado = Estado.EsperandoConfirmacion;
         }
 
-        public void cambiarEstado(Estado estadoNuevo)
+        public void cambiarEstado(int estadoNuevo)
         {
-            Estado  = estadoNuevo;
+            switch (estadoNuevo)
+            {
+                case 1:
+                    Estado = Estado.Preparando;
+                    break;
+                case 2:
+                    Estado = Estado.Listo;
+                    break;
+                case 3:
+                    Estado = Estado.Cancelado;
+                    break;
+                case 4:
+                    Estado = Estado.Enviado;
+                    break;
+                case 5:
+                    Estado = Estado.Entregado;
+                    break;
+                default:
+                    Estado = Estado.EsperandoConfirmacion;
+                    break;
+            }
             return;
         }
 
         public void asignarCadete(Cadete cadete)
         {
-            this.cadete = cadete;
+            this.Cadete = cadete;
             return;
         }
 
         public Cadete getCadete()
         {
-            return cadete;
+            return Cadete;
         }
 
         public string verDireccionCliente()

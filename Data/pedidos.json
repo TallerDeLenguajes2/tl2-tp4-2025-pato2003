@@ -3,100 +3,162 @@
     "nro": 1,
     "obs": "Entregar antes de las 12",
     "cliente": {
-      "nombre": "Juan Pérez",
-      "direccion": "Calle Falsa 123",
-      "telefono": "1133445566",
-      "referencia": "Frente a la plaza"
+      "nombre": "Laura Medina",
+      "direccion": "Av. Corrientes 1234",
+      "telefono": "1165432100",
+      "referencia": "Piso 3, depto B"
+    },
+    "estado": 2,
+    "cadete": {
+      "id": 3,
+      "nombre": "Carlos L\u00F3pez",
+      "direccion": "Boulevard Central 456",
+      "telefono": "1155667788"
     }
   },
   {
     "nro": 2,
     "obs": "Llamar al llegar",
     "cliente": {
-      "nombre": "María Gómez",
-      "direccion": "Av. Siempre Viva 742",
-      "telefono": "1144556677",
-      "referencia": "Edificio azul"
-    }
+      "nombre": "Santiago Rivas",
+      "direccion": "Calle Mitre 456",
+      "telefono": "1176543210",
+      "referencia": "Casa azul"
+    },
+    "estado": 1,
+    "cadete": null
   },
   {
     "nro": 3,
-    "obs": "Dejar en portería",
+    "obs": "Dejar en porter\u00EDa",
     "cliente": {
-      "nombre": "Carlos López",
+      "nombre": "Camila Torres",
+      "direccion": "Boulevard Oro\u00F1o 789",
+      "telefono": "1154321678",
+      "referencia": "Edificio Torre Sur"
+    },
+    "estado": 2,
+    "cadete": {
+      "id": 3,
+      "nombre": "Carlos L\u00F3pez",
       "direccion": "Boulevard Central 456",
-      "telefono": "1155667788",
-      "referencia": "Torre B"
+      "telefono": "1155667788"
     }
   },
   {
     "nro": 4,
     "obs": "No llamar timbre",
     "cliente": {
-      "nombre": "Ana Torres",
-      "direccion": "Diagonal Norte 321",
-      "telefono": "1166778899",
-      "referencia": "Casa con rejas verdes"
-    }
+      "nombre": "Emilia Duarte",
+      "direccion": "Pasaje Las Flores 321",
+      "telefono": "1198765432",
+      "referencia": "Casa con port\u00F3n rojo"
+    },
+    "estado": 5,
+    "cadete": null
   },
   {
     "nro": 5,
-    "obs": "Entregar a vecino si no está",
+    "obs": "Entregar a vecino si no est\u00E1",
     "cliente": {
-      "nombre": "Pedro Sánchez",
+      "nombre": "Tom\u00E1s Herrera",
+      "direccion": "Ruta 33 Km 15",
+      "telefono": "1132109876",
+      "referencia": "Frente a la estaci\u00F3n"
+    },
+    "estado": 0,
+    "cadete": {
+      "id": 5,
+      "nombre": "Pedro S\u00E1nchez",
       "direccion": "Ruta 8 Km 12",
-      "telefono": "1177889900",
-      "referencia": "Casa esquina"
+      "telefono": "1177889900"
     }
   },
   {
     "nro": 6,
     "obs": "Cliente paga con billete grande",
     "cliente": {
-      "nombre": "Lucía Fernández",
-      "direccion": "Pasaje Los Robles 55",
-      "telefono": "1188990011",
-      "referencia": "Puerta marrón"
+      "nombre": "Julieta Paz",
+      "direccion": "Diagonal Sur 555",
+      "telefono": "1187654321",
+      "referencia": "Edificio Los \u00C1lamos"
+    },
+    "estado": 1,
+    "cadete": {
+      "id": 3,
+      "nombre": "Carlos L\u00F3pez",
+      "direccion": "Boulevard Central 456",
+      "telefono": "1155667788"
     }
   },
   {
     "nro": 7,
     "obs": "No tiene cambio",
     "cliente": {
-      "nombre": "Martín Castro",
+      "nombre": "Ramiro Sosa",
+      "direccion": "Av. Pellegrini 2000",
+      "telefono": "1123456789",
+      "referencia": "Local 4"
+    },
+    "estado": 2,
+    "cadete": {
+      "id": 7,
+      "nombre": "Mart\u00EDn Castro",
       "direccion": "Av. Libertad 1000",
-      "telefono": "1199001122",
-      "referencia": "Depto 3B"
+      "telefono": "1199001122"
     }
   },
   {
     "nro": 8,
     "obs": "Entregar en oficina",
     "cliente": {
-      "nombre": "Sofía Ramírez",
-      "direccion": "Callejón del Sol 77",
-      "telefono": "1100112233",
+      "nombre": "Valeria Acosta",
+      "direccion": "Calle Mendoza 888",
+      "telefono": "1178901234",
       "referencia": "Oficina 12"
-    }
+    },
+    "estado": 5,
+    "cadete": null
   },
   {
     "nro": 9,
     "obs": "Cliente con perro",
     "cliente": {
-      "nombre": "Federico Ruiz",
-      "direccion": "Av. San Martín 200",
-      "telefono": "1122334455",
+      "nombre": "Ignacio Molina",
+      "direccion": "Av. San Juan 300",
+      "telefono": "1167890123",
       "referencia": "Casa blanca"
-    }
+    },
+    "estado": 0,
+    "cadete": null
   },
   {
     "nro": 10,
-    "obs": "No dejar en buzón",
+    "obs": "No dejar en buz\u00F3n",
     "cliente": {
-      "nombre": "Valentina Díaz",
-      "direccion": "Calle 9 de Julio 150",
+      "nombre": "Luciana Romero",
+      "direccion": "Calle 25 de Mayo 150",
       "telefono": "1133557799",
       "referencia": "Puerta negra"
+    },
+    "estado": 1,
+    "cadete": {
+      "id": 10,
+      "nombre": "Valentina D\u00EDaz",
+      "direccion": "Calle 9 de Julio 150",
+      "telefono": "1133557799"
     }
+  },
+  {
+    "nro": 11,
+    "obs": "hamburguesa",
+    "cliente": {
+      "nombre": "Bruno Cabrera",
+      "direccion": "Av. Francia 2000",
+      "telefono": "123456",
+      "referencia": "Torre Norte"
+    },
+    "estado": 0,
+    "cadete": null
   }
 ]

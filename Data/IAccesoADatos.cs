@@ -10,6 +10,8 @@ namespace iAccesoADatos
         public List<Cadete> getCadetes();
         public List<Pedidos> getPedidos();
         public InformeCadeteria getInforme();
-        public void agregarPedido(Pedidos pedido);
+        public Pedidos agregarPedido(Pedidos pedido);
+        public void guardarPedidos(List<Pedidos> listaPedidos);
+
     }
 }
