@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>tl2-tp4-2025-pato2003</name>
+    </assembly>
+    <members>
+        <member name="M:tl2_tp4_2025_pato2003.Controllers.CadeteriaController.GetCadetes">
+            <summary>
+            Devuelve el listado de todos los cadetes
+            </summary>
+            <returns>200 ok -</returns>
+        </member>
+        <member name="M:tl2_tp4_2025_pato2003.Controllers.CadeteriaController.agregarPedido(pedidos.Pedidos)">
+            <summary>
+            Recibe los datos de un nuevo pedido
+            </summary>
+            <param name="pedidoNuevo">Json con los datos del nuevo pedido</param>
+            <returns>201 - objeto creado</returns>
+        </member>
+    </members>
+</doc>

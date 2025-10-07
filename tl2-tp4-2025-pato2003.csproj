@@ -4,6 +4,8 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <RootNamespace>tl2_tp4_2025_pato2003</RootNamespace>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);1591</NoWarn>                              
   </PropertyGroup>
 
   <ItemGroup>

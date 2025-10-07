@@ -8,12 +8,12 @@
       "telefono": "1165432100",
       "referencia": "Piso 3, depto B"
     },
-    "estado": 2,
+    "estado": 3,
     "cadete": {
-      "id": 3,
-      "nombre": "Carlos L\u00F3pez",
-      "direccion": "Boulevard Central 456",
-      "telefono": "1155667788"
+      "id": 1,
+      "nombre": "Juan P\u00E9rez",
+      "direccion": "Calle Falsa 123",
+      "telefono": "1133445566"
     }
   },
   {
@@ -157,6 +157,23 @@
       "direccion": "Av. Francia 2000",
       "telefono": "123456",
       "referencia": "Torre Norte"
+    },
+    "estado": 0,
+    "cadete": {
+      "id": 3,
+      "nombre": "Carlos L\u00F3pez",
+      "direccion": "Boulevard Central 456",
+      "telefono": "1155667788"
+    }
+  },
+  {
+    "nro": 0,
+    "obs": "hamburguesa",
+    "cliente": {
+      "nombre": "Patricio",
+      "direccion": "manuel Alberti 427",
+      "telefono": "3814138845",
+      "referencia": "san juan 2000"
     },
     "estado": 0,
     "cadete": null

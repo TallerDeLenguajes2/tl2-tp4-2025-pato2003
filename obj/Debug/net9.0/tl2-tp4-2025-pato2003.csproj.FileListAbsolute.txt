@@ -8,7 +8,6 @@ C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\obj\Debug\net9.0\tl2-tp4-
 C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\obj\Debug\net9.0\tl2-tp4-2025-pato2003.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\bin\Debug\net9.0\appsettings.json
-C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\bin\Debug\net9.0\Data\cadeterias.json
 C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\bin\Debug\net9.0\Data\cadetes.json
 C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\bin\Debug\net9.0\Data\informe.json
 C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\bin\Debug\net9.0\Data\pedidos.json
@@ -38,3 +37,6 @@ C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\bin\Debug\net9.0\Swashbuc
 C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\bin\Debug\net9.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\obj\Debug\net9.0\tl2-tp4-2025-pato2003.sourcelink.json
+C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\bin\Debug\net9.0\Data\cadeteria.json
+C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\bin\Debug\net9.0\tl2-tp4-2025-pato2003.xml
+C:\Users\pator\Documents\Fac\TL2\tl2-tp4-2025-pato2003\obj\Debug\net9.0\tl2-tp4-2025-pato2003.xml

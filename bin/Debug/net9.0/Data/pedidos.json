@@ -8,12 +8,12 @@
       "telefono": "1165432100",
       "referencia": "Piso 3, depto B"
     },
-    "estado": 2,
+    "estado": 3,
     "cadete": {
-      "id": 2,
-      "nombre": "María Gómez",
-      "direccion": "Av. Siempre Viva 742",
-      "telefono": "1144556677"
+      "id": 1,
+      "nombre": "Juan P\u00E9rez",
+      "direccion": "Calle Falsa 123",
+      "telefono": "1133445566"
     }
   },
   {
@@ -30,17 +30,17 @@
   },
   {
     "nro": 3,
-    "obs": "Dejar en portería",
+    "obs": "Dejar en porter\u00EDa",
     "cliente": {
       "nombre": "Camila Torres",
-      "direccion": "Boulevard Oroño 789",
+      "direccion": "Boulevard Oro\u00F1o 789",
       "telefono": "1154321678",
       "referencia": "Edificio Torre Sur"
     },
     "estado": 2,
     "cadete": {
       "id": 3,
-      "nombre": "Carlos López",
+      "nombre": "Carlos L\u00F3pez",
       "direccion": "Boulevard Central 456",
       "telefono": "1155667788"
     }
@@ -52,24 +52,24 @@
       "nombre": "Emilia Duarte",
       "direccion": "Pasaje Las Flores 321",
       "telefono": "1198765432",
-      "referencia": "Casa con portón rojo"
+      "referencia": "Casa con port\u00F3n rojo"
     },
     "estado": 5,
     "cadete": null
   },
   {
     "nro": 5,
-    "obs": "Entregar a vecino si no está",
+    "obs": "Entregar a vecino si no est\u00E1",
     "cliente": {
-      "nombre": "Tomás Herrera",
+      "nombre": "Tom\u00E1s Herrera",
       "direccion": "Ruta 33 Km 15",
       "telefono": "1132109876",
-      "referencia": "Frente a la estación"
+      "referencia": "Frente a la estaci\u00F3n"
     },
     "estado": 0,
     "cadete": {
       "id": 5,
-      "nombre": "Pedro Sánchez",
+      "nombre": "Pedro S\u00E1nchez",
       "direccion": "Ruta 8 Km 12",
       "telefono": "1177889900"
     }
@@ -81,12 +81,12 @@
       "nombre": "Julieta Paz",
       "direccion": "Diagonal Sur 555",
       "telefono": "1187654321",
-      "referencia": "Edificio Los Álamos"
+      "referencia": "Edificio Los \u00C1lamos"
     },
     "estado": 1,
     "cadete": {
       "id": 3,
-      "nombre": "Carlos López",
+      "nombre": "Carlos L\u00F3pez",
       "direccion": "Boulevard Central 456",
       "telefono": "1155667788"
     }
@@ -103,7 +103,7 @@
     "estado": 2,
     "cadete": {
       "id": 7,
-      "nombre": "Martín Castro",
+      "nombre": "Mart\u00EDn Castro",
       "direccion": "Av. Libertad 1000",
       "telefono": "1199001122"
     }
@@ -134,7 +134,7 @@
   },
   {
     "nro": 10,
-    "obs": "No dejar en buzón",
+    "obs": "No dejar en buz\u00F3n",
     "cliente": {
       "nombre": "Luciana Romero",
       "direccion": "Calle 25 de Mayo 150",
@@ -144,7 +144,7 @@
     "estado": 1,
     "cadete": {
       "id": 10,
-      "nombre": "Valentina Díaz",
+      "nombre": "Valentina D\u00EDaz",
       "direccion": "Calle 9 de Julio 150",
       "telefono": "1133557799"
     }
@@ -157,6 +157,23 @@
       "direccion": "Av. Francia 2000",
       "telefono": "123456",
       "referencia": "Torre Norte"
+    },
+    "estado": 0,
+    "cadete": {
+      "id": 3,
+      "nombre": "Carlos L\u00F3pez",
+      "direccion": "Boulevard Central 456",
+      "telefono": "1155667788"
+    }
+  },
+  {
+    "nro": 0,
+    "obs": "hamburguesa",
+    "cliente": {
+      "nombre": "Patricio",
+      "direccion": "manuel Alberti 427",
+      "telefono": "3814138845",
+      "referencia": "san juan 2000"
     },
     "estado": 0,
     "cadete": null

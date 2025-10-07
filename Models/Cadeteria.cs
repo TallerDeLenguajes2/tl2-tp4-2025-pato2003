@@ -25,41 +25,10 @@ namespace cadeteria
         }
 
 
-        public static Cadeteria procesarDatosCadeterias(string[] contenido)
-        {
-            Cadeteria cadeteria = new Cadeteria(contenido[0], contenido[1]);
-            return cadeteria;
-        }
-
         public void anadirCadete(Cadete cadete)
         {
             ListadoCadetes.Add(cadete);
             return;
-        }
-
-
-
-        public string mostrarInforme()
-        {
-            string mensaje = "\n--- Informe de Pedidos ---\n";
-            int totalEnvios = 0;
-            double totalMonto = 0;
-            int cantidadDePedidos;
-
-            foreach (var cadete in ListadoCadetes)
-            {
-                cantidadDePedidos = cantidadPedidos(cadete.Id);
-                totalEnvios += cantidadDePedidos;
-                double montoGanado = cantidadDePedidos * 500;
-                totalMonto += montoGanado;
-                mensaje += $"Cadete: {cadete.Nombre} | Envíos: {cantidadDePedidos} | Monto ganado: ${montoGanado}\n";
-            }
-
-            double promedioEnvios = ListadoCadetes.Count > 0 ? (double)totalEnvios / ListadoCadetes.Count : 0;
-            mensaje += $"\nTotal de envíos: {totalEnvios}\n";
-            mensaje += $"Total ganado por todos los cadetes: ${totalMonto}\n";
-            mensaje += $"Promedio de envíos por cadete: {promedioEnvios:F2}\n";
-            return mensaje;
         }
 
 
@@ -74,6 +43,17 @@ namespace cadeteria
 
 
 
+        public Pedidos asignarPedido(int idPedido, int idCadete)
+        {
+            Pedidos pedido = GetPedido(idPedido);
+            if (pedido.Cadete == null)
+            {
+                return null;
+            }
+            Cadete cadete = GetCadete(idCadete);
+            pedido.asignarCadete(cadete);
+            return pedido;
+        }
         public void reasignarPedido(int idPedido, int idCadeteNuevo)
         {
             Pedidos pedidoAReasignar = GetPedido(idPedido);
@@ -95,7 +75,7 @@ namespace cadeteria
         }
 
 
-        public void asignarCadeteAPedido(int idCadete, int idPedido)
+        public void CambiarCadeteAPedido(int idCadete, int idPedido)
         {
             Pedidos pedidoAAsignar = GetPedido(idPedido);
             Cadete cadete = GetCadete(idCadete);
@@ -133,9 +113,9 @@ namespace cadeteria
         }
 
 
-        
 
-  
+
+
         public void agregarListaCadetes(List<Cadete> listadoCadetes)
         {
             foreach (Cadete cadete in listadoCadetes)
@@ -144,9 +124,26 @@ namespace cadeteria
             }
         }
 
+
+        public void agregarListaPedidos(List<Pedidos> listaPedidos)
+        {
+            foreach (Pedidos pedido in listaPedidos)
+            {
+                ListadoPedidos.Add(pedido);
+            }
+        }
+
         public void crearPedido(Pedidos pedido)
         {
             ListadoPedidos.Add(pedido);
+        }
+
+
+        public void cambiarEstadoPedido(int estadoNuevo, int idPedido)
+        {
+            Pedidos pedido = GetPedido(idPedido);
+            pedido.cambiarEstado(estadoNuevo);
+            return;
         }
     }
 

@@ -1,115 +1,97 @@
-using iAccesoADatos;
 using Microsoft.AspNetCore.Mvc;
-using accesoADatosJSON;
 using pedidos;
 using cadete;
-using informe;
+using cadeteria;
+using accesoADatosCadeteria;
+using accesoADatosCadetes;
+using accesoADatosPedidos;
 
 namespace tl2_tp4_2025_pato2003.Controllers
 {
+    
     [ApiController]
     [Route("[controller]")]
     public class CadeteriaController : ControllerBase
     {
-        private IAccesoADatos accesoADatos;
+        private Cadeteria cadeteria;
+        private AccesoADatosCadeteria ADCadeteria;
+        private AccesoADatosCadetes ADCadetes; 
+        private AccesoADatosPedidos ADPedidos;
         public CadeteriaController()
         {
-            accesoADatos = new AccesoADatosJSON("cadeterias.json", "cadetes.json", "pedidos.json", "informe.json");
+            ADCadeteria = new AccesoADatosCadeteria();
+            ADCadetes = new AccesoADatosCadetes();
+            ADPedidos = new AccesoADatosPedidos();
+
+            cadeteria = ADCadeteria.Obtener();
+            cadeteria.agregarListaCadetes(ADCadetes.Obtener());
+            cadeteria.agregarListaPedidos(ADPedidos.Obtener());
+
         }
 
-        [HttpGet("GetCadetes")]
+        /// <summary>
+        /// Devuelve el listado de todos los cadetes
+        /// </summary>
+        /// <returns>200 ok -</returns>
+        [HttpGet]
+        [Route("GetCadetes")]
         public ActionResult<List<Cadete>> GetCadetes()
         {
-            List<Cadete> cadetes = accesoADatos.getCadetes();
-            return Ok(cadetes);
+            var listaCadetes = cadeteria.ListadoCadetes;
+            return Ok(listaCadetes);
         }
-        [HttpGet("GetPedidos")]
+
+        [HttpGet]
+        [Route("GetPedidos")]
         public ActionResult<List<Pedidos>> GetPedidos()
         {
-            List<Pedidos> pedidos = accesoADatos.getPedidos();
-            return Ok(pedidos);
-        }
-        [HttpGet("GetInforme")]
-        public ActionResult<InformeCadeteria> GetInforme()
-        {
-            InformeCadeteria informe = accesoADatos.getInforme();
-            return Ok(informe);
+            var listaPedidos = cadeteria.ListadoPedidos;
+            return Ok(listaPedidos);
         }
 
 
-        [HttpPost]
-        public ActionResult<Pedidos> agregarPedido(Pedidos pedidoNuevo)
+        /// <summary>
+        /// Recibe los datos de un nuevo pedido
+        /// </summary>
+        /// <param name="pedidoNuevo">Json con los datos del nuevo pedido</param>
+        /// <returns>201 - objeto creado</returns>
+
+        [HttpPost("DarDeAltaPedido")]
+        public ActionResult<string> agregarPedido(Pedidos pedidoNuevo)
         {
-            var pedido = accesoADatos.agregarPedido(pedidoNuevo);
-            return Ok(pedido);
+            cadeteria.crearPedido(pedidoNuevo);
+            ADPedidos.Guardar(cadeteria.ListadoPedidos);
+            return Created("","Se creo exitosamente el pedido");
         }
 
 
         [HttpPut("AsignarPedido")]
         public ActionResult<Pedidos> AsignarPedido(int idPedido, int idCadete)
         {
-            var listaPedidos = accesoADatos.getPedidos();
-            var listaCadetes = accesoADatos.getCadetes();
-            Pedidos pedido = listaPedidos.Find(p => p.Nro == idPedido);
-            if (pedido == null)
+            Pedidos pedido = cadeteria.asignarPedido(idPedido, idCadete);
+            if (pedido!= null) {
+                ADPedidos.Guardar(cadeteria.ListadoPedidos);
+                return Ok(pedido);
+            }else
             {
-                return NotFound("No existe ningun pedido con ese id");
+                return BadRequest("El pedido ya tiene asignado un cadete");
             }
-
-            Cadete cadete = listaCadetes.Find(c => c.Id == idCadete);
-            if (cadete == null)
-            {
-                return NotFound("No existe ningun cadete con ese id");
-            }
-
-            if (pedido.Cadete!=null)
-            {
-                return BadRequest("Este pedido ya tiene asignado un cadete");
-            }
-            pedido.asignarCadete(cadete);
-            accesoADatos.guardarPedidos(listaPedidos);
-            return Ok(pedido);
         }
 
         [HttpPut("CambiarEstadoPedido")]
-        public ActionResult<Pedidos> CambiarEstadoPedido(int idPedido, int nuevoEstado)
+        public ActionResult<string> CambiarEstadoPedido(int idPedido, int nuevoEstado)
         {
-            var listaPedidos = accesoADatos.getPedidos();
-            Pedidos pedido = listaPedidos.Find(p => p.Nro == idPedido);
-            if (pedido == null)
-            {
-                return NotFound("No existe ningun pedido con ese id");
-            }
-
-            if (nuevoEstado < 0 || nuevoEstado > 5)
-            {
-                return BadRequest("Valor de estado incorrecto");
-            }
-
-            pedido.cambiarEstado(nuevoEstado);
-            accesoADatos.guardarPedidos(listaPedidos);
-            return Ok(pedido);
+            cadeteria.cambiarEstadoPedido(nuevoEstado, idPedido);
+            ADPedidos.Guardar(cadeteria.ListadoPedidos);
+            return Ok("El estado del pedido se actualizo correctamente");
         }
 
         [HttpPut("CambiarCadetePedido")]
-        public ActionResult<Pedidos> CambiarCadetePedido(int idPedido, int idNuevoCadete)
+        public ActionResult<string> CambiarCadetePedido(int idPedido, int idNuevoCadete)
         {
-            var listaPedidos = accesoADatos.getPedidos();
-            var listaCadetes = accesoADatos.getCadetes();
-            Pedidos pedido = listaPedidos.Find(p => p.Nro == idPedido);
-            if (pedido == null)
-            {
-                return NotFound("No existe ningun pedido con ese id");
-            }
-
-            Cadete cadete = listaCadetes.Find(c => c.Id == idNuevoCadete);
-            if (cadete == null)
-            {
-                return NotFound("No existe ningun cadete con ese id");
-            }
-            pedido.asignarCadete(cadete);
-            accesoADatos.guardarPedidos(listaPedidos);
-            return Ok(pedido);
+            cadeteria.CambiarCadeteAPedido(idNuevoCadete, idPedido);
+            ADPedidos.Guardar(cadeteria.ListadoPedidos);
+            return Ok("El pedido se guardo correctamente");
         }
     }
 }
