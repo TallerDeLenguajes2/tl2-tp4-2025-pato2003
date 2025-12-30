@@ -177,5 +177,39 @@
     },
     "estado": 0,
     "cadete": null
+  },
+  {
+    "nro": 1,
+    "obs": "Entregar antes de las 12",
+    "cliente": {
+      "nombre": "Laura Medina",
+      "direccion": "Av. Corrientes 1234",
+      "telefono": "1165432100",
+      "referencia": "Piso 3, depto B"
+    },
+    "estado": 3,
+    "cadete": {
+      "id": 1,
+      "nombre": "Juan P\u00E9rez",
+      "direccion": "Calle Falsa 123",
+      "telefono": "1133445566"
+    }
+  },
+  {
+    "nro": 5,
+    "obs": "Paoas",
+    "cliente": {
+      "nombre": "string",
+      "direccion": "string",
+      "telefono": "string",
+      "referencia": "string"
+    },
+    "estado": 0,
+    "cadete": {
+      "id": 0,
+      "nombre": "string",
+      "direccion": "string",
+      "telefono": "string"
+    }
   }
 ]

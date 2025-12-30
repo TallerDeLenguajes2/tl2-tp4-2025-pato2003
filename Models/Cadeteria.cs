@@ -46,7 +46,8 @@ namespace cadeteria
         public Pedidos asignarPedido(int idPedido, int idCadete)
         {
             Pedidos pedido = GetPedido(idPedido);
-            if (pedido.Cadete == null)
+            if (pedido == null) return null;
+            if (pedido.Cadete != null)
             {
                 return null;
             }

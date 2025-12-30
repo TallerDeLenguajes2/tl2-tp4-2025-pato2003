@@ -57,14 +57,19 @@ namespace tl2_tp4_2025_pato2003.Controllers
         /// <returns>201 - objeto creado</returns>
 
         [HttpPost("DarDeAltaPedido")]
-        public ActionResult<string> agregarPedido(Pedidos pedidoNuevo)
+        public ActionResult<string> agregarPedido([FromBody]Pedidos pedidoNuevo)
         {
             cadeteria.crearPedido(pedidoNuevo);
             ADPedidos.Guardar(cadeteria.ListadoPedidos);
             return Created("","Se creo exitosamente el pedido");
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="idPedido"></param>
+        /// <param name="idCadete"></param>
+        /// <returns></returns>
         [HttpPut("AsignarPedido")]
         public ActionResult<Pedidos> AsignarPedido(int idPedido, int idCadete)
         {

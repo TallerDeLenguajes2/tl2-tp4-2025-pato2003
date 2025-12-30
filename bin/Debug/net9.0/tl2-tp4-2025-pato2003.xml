@@ -17,5 +17,13 @@
             <param name="pedidoNuevo">Json con los datos del nuevo pedido</param>
             <returns>201 - objeto creado</returns>
         </member>
+        <member name="M:tl2_tp4_2025_pato2003.Controllers.CadeteriaController.AsignarPedido(System.Int32,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="idPedido"></param>
+            <param name="idCadete"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>
